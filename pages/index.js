@@ -16,9 +16,12 @@ export default function Home({ session }) {
       {
         session ? (
           <main>
-            <h1>{session.user.name}</h1>
+            <h2>{session.user.name}</h2>
             <img src={session.user.image} />
-            <Button color="error" onPress={() => signOut()} >LogOut</Button>
+            <h3>Balance: $915</h3>
+            <Button color="success" >Deposit</Button>
+            <Button color="error" >Withdraw</Button>
+            <Button color="gradient" onPress={() => signOut()} >LogOut</Button>
           </main>
         ) : (
           <p>Skeleton</p>
