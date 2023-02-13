@@ -17,9 +17,8 @@ export default function Home({ session }) {
         session ? (
           <main>
             <h1>{session.user.name}</h1>
-            <h3>{session.user.email}</h3>
             <img src={session.user.image} />
-            <Button onPress={() => signOut()} >LogOut</Button>
+            <Button color="error" onPress={() => signOut()} >LogOut</Button>
           </main>
         ) : (
           <p>Skeleton</p>
